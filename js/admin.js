@@ -31,10 +31,24 @@
     .replace(/>/g, '&gt;');
 
   const fileToDataUrl = (file) => new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload  = () => resolve(reader.result);
-    reader.onerror = () => reject(reader.error || new Error('FileReader error'));
-    reader.readAsDataURL(file);
+    const img = new Image();
+    const objectUrl = URL.createObjectURL(file);
+    img.onload = () => {
+      URL.revokeObjectURL(objectUrl);
+      const MAX = 800;
+      let { width, height } = img;
+      if (width > MAX || height > MAX) {
+        if (width > height) { height = Math.round(height * MAX / width); width = MAX; }
+        else                { width = Math.round(width * MAX / height); height = MAX; }
+      }
+      const canvas = document.createElement('canvas');
+      canvas.width  = width;
+      canvas.height = height;
+      canvas.getContext('2d').drawImage(img, 0, 0, width, height);
+      resolve(canvas.toDataURL('image/jpeg', 0.8));
+    };
+    img.onerror = () => { URL.revokeObjectURL(objectUrl); reject(new Error('Erro ao carregar imagem')); };
+    img.src = objectUrl;
   });
 
   const buildBlock = (i, ev) => {
@@ -88,11 +102,7 @@
     fileInput.addEventListener('change', async (e) => {
       const file = e.target.files && e.target.files[0];
       if (!file) return;
-      if (file.size > 2 * 1024 * 1024) {
-        setStatus(`Imagem demasiado grande (>${'2'}MB). Use uma imagem mais pequena ou um URL.`, 'err');
-        e.target.value = '';
-        return;
-      }
+      setStatus('A processar imagem…', 'ok');
       try {
         const dataUrl = await fileToDataUrl(file);
         urlInput.value = dataUrl;
