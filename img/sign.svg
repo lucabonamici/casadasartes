@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" preserveAspectRatio="xMidYMid slice">
+  <!-- stone wall -->
+  <rect width="900" height="1100" fill="#d4c8a8"/>
+  <g opacity="0.7">
+    <rect x="0" y="0" width="300" height="1100" fill="#3a3a38"/>
+    <rect x="20" y="40" width="260" height="90" fill="#4a4a48" stroke="#2a2a28"/>
+    <rect x="20" y="150" width="260" height="110" fill="#5a5a58" stroke="#2a2a28"/>
+    <rect x="20" y="280" width="260" height="100" fill="#4a4a48" stroke="#2a2a28"/>
+    <rect x="20" y="400" width="260" height="120" fill="#525250" stroke="#2a2a28"/>
+    <rect x="20" y="540" width="260" height="100" fill="#4a4a48" stroke="#2a2a28"/>
+    <rect x="20" y="660" width="260" height="110" fill="#5a5a58" stroke="#2a2a28"/>
+    <rect x="20" y="790" width="260" height="100" fill="#4a4a48" stroke="#2a2a28"/>
+    <rect x="20" y="910" width="260" height="170" fill="#525250" stroke="#2a2a28"/>
+  </g>
+  <!-- chain -->
+  <line x1="470" y1="100" x2="470" y2="220" stroke="#1a1a18" stroke-width="3"/>
+  <line x1="680" y1="100" x2="680" y2="220" stroke="#1a1a18" stroke-width="3"/>
+  <!-- sign panel (hanging) -->
+  <g transform="translate(330 220)">
+    <rect width="480" height="520" fill="#f0ead8" stroke="#1a1a18" stroke-width="2"/>
+    <!-- wood grain -->
+    <g opacity="0.15" stroke="#1a1a18" stroke-width="1" fill="none">
+      <line x1="0" y1="60" x2="480" y2="65"/>
+      <line x1="0" y1="140" x2="480" y2="150"/>
+      <line x1="0" y1="240" x2="480" y2="235"/>
+      <line x1="0" y1="340" x2="480" y2="345"/>
+      <line x1="0" y1="440" x2="480" y2="438"/>
+    </g>
+    <!-- scribble circle -->
+    <g transform="translate(240 220)" fill="none" stroke="#0a0a0a" stroke-width="2">
+      <ellipse cx="0" cy="0" rx="170" ry="160" transform="rotate(-8)"/>
+      <ellipse cx="0" cy="0" rx="165" ry="155" transform="rotate(14)"/>
+      <ellipse cx="0" cy="0" rx="172" ry="158" transform="rotate(28)"/>
+      <ellipse cx="0" cy="0" rx="168" ry="162" transform="rotate(-22)"/>
+    </g>
+    <!-- text -->
+    <text x="240" y="180" text-anchor="middle" fill="#0a0a0a" font-family="Georgia" font-size="36">MEIA VOLTA</text>
+    <text x="240" y="230" text-anchor="middle" fill="#0a0a0a" font-family="Georgia" font-size="28" font-style="italic">de</text>
+    <text x="240" y="290" text-anchor="middle" fill="#0a0a0a" font-family="Georgia" font-size="48" font-weight="bold">ÚRANO</text>
+    <text x="240" y="470" text-anchor="middle" fill="#0a0a0a" font-family="Georgia" font-size="34" font-style="italic">Casa das Artes</text>
+  </g>
+</svg>

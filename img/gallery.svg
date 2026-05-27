@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="800" fill="#0f0d0a"/>
+  <!-- chalkboard wall -->
+  <rect x="0" y="0" width="1200" height="500" fill="#14120e"/>
+  <!-- "EXPOSIÇÃO" text -->
+  <text x="120" y="120" fill="#e8e4d4" font-family="Georgia" font-size="72" font-style="italic" opacity="0.5">Exposição</text>
+  <text x="900" y="180" fill="#e8e4d4" font-family="Georgia" font-size="28" font-style="italic" opacity="0.4">Meia Volta</text>
+  <text x="900" y="215" fill="#e8e4d4" font-family="Georgia" font-size="28" font-style="italic" opacity="0.4">de Úrano</text>
+  <!-- guitars -->
+  <g transform="translate(200 420)">
+    <ellipse cx="0" cy="80" rx="70" ry="90" fill="#8a5a2a"/>
+    <circle cx="0" cy="70" r="18" fill="#0a0908"/>
+    <rect x="-6" y="-160" width="12" height="160" fill="#3a2a1a"/>
+  </g>
+  <g transform="translate(380 440)">
+    <ellipse cx="0" cy="70" rx="65" ry="85" fill="#a67a3e"/>
+    <circle cx="0" cy="60" r="16" fill="#0a0908"/>
+    <rect x="-5" y="-160" width="10" height="160" fill="#3a2a1a"/>
+  </g>
+  <g transform="translate(560 430)">
+    <ellipse cx="0" cy="75" rx="68" ry="88" fill="#c89a5a"/>
+    <circle cx="0" cy="65" r="17" fill="#0a0908"/>
+    <rect x="-5" y="-160" width="10" height="160" fill="#3a2a1a"/>
+  </g>
+  <g transform="translate(900 440)">
+    <ellipse cx="0" cy="70" rx="65" ry="85" fill="#d4b07a"/>
+    <circle cx="0" cy="60" r="16" fill="#0a0908"/>
+    <rect x="-5" y="-160" width="10" height="160" fill="#3a2a1a"/>
+  </g>
+  <!-- table -->
+  <rect x="650" y="580" width="220" height="140" fill="#1a1612"/>
+  <!-- wine bottle -->
+  <rect x="700" y="520" width="24" height="80" fill="#2a0a0a"/>
+  <rect x="700" y="500" width="24" height="20" fill="#3a1a1a"/>
+  <!-- wine glasses -->
+  <g transform="translate(760 560)">
+    <path d="M-12 0 Q-12 -20 0 -25 Q12 -20 12 0 L 4 20 L-4 20 Z" fill="none" stroke="#d8d4c4" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(810 560)">
+    <path d="M-12 0 Q-12 -20 0 -25 Q12 -20 12 0 L 4 20 L-4 20 Z" fill="none" stroke="#d8d4c4" stroke-width="1.5"/>
+  </g>
+</svg>

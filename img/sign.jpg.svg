@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a2620"/>
+      <stop offset="100%" stop-color="#0f0d0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#g1)"/>
+  <g fill="none" stroke="#f4f2ec" stroke-width="2" transform="translate(400 500)">
+    <ellipse cx="0" cy="0" rx="220" ry="220"/>
+    <ellipse cx="0" cy="0" rx="215" ry="215" transform="rotate(24)"/>
+  </g>
+  <text x="400" y="480" text-anchor="middle" fill="#f4f2ec" font-family="Georgia, serif" font-size="48" font-style="italic">Meia Volta</text>
+  <text x="400" y="540" text-anchor="middle" fill="#f4f2ec" font-family="Georgia, serif" font-size="36">de Úrano</text>
+  <text x="400" y="600" text-anchor="middle" fill="#bbb" font-family="Georgia, serif" font-size="22" font-style="italic">Casa das Artes</text>
+</svg>

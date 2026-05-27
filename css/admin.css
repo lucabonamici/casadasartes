@@ -1,0 +1,205 @@
+/* =========================================================
+   MEIA VOLTA DO ÚRANO — admin editor
+   ========================================================= */
+
+.admin-body {
+  background: var(--cream-alt);
+  color: var(--black);
+  font-family: var(--ff-body);
+  min-height: 100vh;
+  padding: 40px 24px 96px;
+}
+
+.admin-header {
+  max-width: 880px;
+  margin: 0 auto 36px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(13, 13, 13, 0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.admin-eyebrow {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 8px;
+}
+.admin-header h1 {
+  font-family: var(--ff-display);
+  font-size: clamp(34px, 4.5vw, 52px);
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.admin-back {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 3px;
+  transition: color 0.25s;
+}
+.admin-back:hover { color: var(--black); }
+
+.admin-main { max-width: 880px; margin: 0 auto; }
+
+.admin-intro {
+  font-size: 13px;
+  color: var(--mid);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+.admin-intro strong { color: var(--black); font-weight: 500; }
+
+.admin-form {
+  display: grid;
+  gap: 24px;
+}
+
+.admin-event {
+  background: var(--cream);
+  border: 1px solid rgba(13, 13, 13, 0.1);
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+}
+.admin-event legend {
+  font-family: var(--ff-display);
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0 8px;
+  color: var(--black);
+}
+
+.admin-event label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+
+.admin-event input[type="text"],
+.admin-event input[type="url"],
+.admin-event textarea {
+  font-family: var(--ff-body);
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--black);
+  padding: 11px 13px;
+  border: 1px solid rgba(13, 13, 13, 0.18);
+  background: var(--white);
+  border-radius: 0;
+  resize: vertical;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+.admin-event textarea { min-height: 72px; line-height: 1.55; }
+
+.admin-event input:focus,
+.admin-event textarea:focus {
+  outline: none;
+  border-color: var(--black);
+}
+
+.admin-row--split {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 14px;
+}
+
+.admin-event input[type="file"] {
+  font-family: var(--ff-body);
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--mid);
+  padding: 6px 0;
+}
+
+.admin-preview {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: rgba(13, 13, 13, 0.06);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed rgba(13, 13, 13, 0.18);
+}
+.admin-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.admin-preview__empty {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+
+.admin-actions {
+  margin-top: 32px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.admin-btn {
+  font-family: var(--ff-body);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  cursor: pointer;
+  border-radius: 0;
+  transition: opacity 0.25s, background 0.25s, color 0.25s, border-color 0.25s;
+}
+.admin-btn--primary {
+  background: var(--black);
+  color: var(--cream);
+  border: 1px solid var(--black);
+}
+.admin-btn--primary:hover { background: #2a2a2a; }
+.admin-btn--ghost {
+  background: transparent;
+  border: 1px solid rgba(13, 13, 13, 0.35);
+  color: var(--black);
+}
+.admin-btn--ghost:hover { border-color: var(--black); background: rgba(13,13,13,0.04); }
+
+.admin-status {
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  min-height: 1.5em;
+  line-height: 1.6;
+}
+.admin-status--ok  { color: #2a6a2a; }
+.admin-status--err { color: #a32020; }
+
+@media (max-width: 600px) {
+  .admin-body { padding: 28px 18px 72px; }
+  .admin-header { gap: 16px; }
+  .admin-event { padding: 20px; }
+  .admin-row--split { grid-template-columns: 1fr 1fr; }
+  .admin-btn { padding: 14px 22px; width: 100%; }
+  .admin-actions { gap: 10px; }
+}

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Meia Volta do Úrano — Casa das Artes. Restaurante, livraria, cafetaria, bar e galeria num único espaço cultural no coração de Lisboa." />
+  <title>Meia Volta do Úrano · Casa das Artes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Hidden SVG symbols -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="logo-mark" viewBox="0 0 100 100">
+      <g fill="none" stroke="currentColor" stroke-linecap="round">
+        <ellipse cx="50" cy="50" rx="38" ry="38" transform="rotate(-12 50 50)" stroke-width="2.2"/>
+        <ellipse cx="50" cy="50" rx="37" ry="37" transform="rotate(18 50 50)" stroke-width="0.8"/>
+        <path d="M50 12 L50 88" stroke-width="0.8"/>
+        <path d="M46 34 Q38 40 42 50 Q46 58 48 64 Q50 70 54 72" stroke-width="1.6"/>
+        <circle cx="44" cy="38" r="3" stroke-width="1.4"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <!-- Floating CTA -->
+  <a href="https://www.tripadvisor.com/" class="cta-float" target="_blank" rel="noopener" aria-label="Reservar uma mesa">
+    <span class="cta-float__mark" aria-hidden="true">
+      <svg viewBox="0 0 100 100"><use href="#logo-mark"/></svg>
+    </span>
+    Reservar Mesa
+  </a>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <header class="site-header" id="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <div class="nav__left">
+        <a href="#conceito">Conceito</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#menu">Menu</a>
+      </div>
+      <a href="#home" class="nav__logo" aria-label="Meia Volta do Úrano — início">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#logo-mark"/></svg>
+      </a>
+      <div class="nav__right">
+        <a href="#espacos">Espaços</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav__mobile" id="navMobile" aria-hidden="true">
+      <a href="#conceito">Conceito</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#menu">Menu</a>
+      <a href="#espacos">Espaços</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener" class="nav__mobile-cta">Reservar Mesa →</a>
+    </div>
+  </header>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="home">
+    <div class="hero__layout">
+
+      <!-- Left column: hand-drawn sketch -->
+      <div class="hero__art" aria-hidden="true">
+        <svg id="hero-sketch" class="sketch" viewBox="0 0 420 600" fill="none" stroke="#0d0d0d" stroke-linecap="round" stroke-linejoin="round">
+
+          <!-- ── DEFS: clip rings into back / front halves ── -->
+          <defs>
+            <clipPath id="clip-ring-back">
+              <rect x="0" y="0" width="420" height="150"/>
+            </clipPath>
+            <clipPath id="clip-ring-front">
+              <rect x="0" y="150" width="420" height="450"/>
+            </clipPath>
+          </defs>
+
+          <!-- ── PLANETA ÚRANO ── -->
+          <!-- Rings behind planet (upper arcs only) -->
+          <g clip-path="url(#clip-ring-back)">
+            <ellipse id="ring-1" cx="210" cy="150" rx="118" ry="16" transform="rotate(12 210 150)" stroke-width="1.8"/>
+            <ellipse id="ring-2" cx="210" cy="150" rx="140" ry="22" transform="rotate(12 210 150)" stroke-width="1.2"/>
+            <ellipse id="ring-3" cx="210" cy="150" rx="158" ry="28" transform="rotate(9 210 150)"  stroke-width="0.8"/>
+          </g>
+          <!-- Planet body (fill occludes back-ring portions) -->
+          <circle cx="210" cy="150" r="90" fill="#f4ede0" stroke-width="2.2"/>
+          <!-- Bandas atmosféricas (giram com o planeta) -->
+          <g id="planet-bands">
+            <path d="M143,116 C168,109 193,114 210,112 C227,110 254,107 277,114" stroke-width="1.1"/>
+            <path d="M132,146 C166,138 194,144 210,142 C226,140 258,136 287,143" stroke-width="1.1"/>
+            <path d="M136,176 C168,168 195,174 210,172 C225,170 257,167 284,174" stroke-width="1.1"/>
+          </g>
+          <!-- Lua (orbita ao scroll) -->
+          <g id="moon-group">
+            <circle cx="360" cy="58" r="15" stroke-width="1.5"/>
+            <circle cx="355" cy="53" r="4.5" stroke-width="1"/>
+          </g>
+          <!-- Rings in front of planet (lower arcs only) -->
+          <g clip-path="url(#clip-ring-front)">
+            <ellipse id="ring-1f" cx="210" cy="150" rx="118" ry="16" transform="rotate(12 210 150)" stroke-width="1.8"/>
+            <ellipse id="ring-2f" cx="210" cy="150" rx="140" ry="22" transform="rotate(12 210 150)" stroke-width="1.2"/>
+            <ellipse id="ring-3f" cx="210" cy="150" rx="158" ry="28" transform="rotate(9 210 150)"  stroke-width="0.8"/>
+          </g>
+
+          <!-- ── LIGAÇÃO CÓSMICA: fio entre planeta e livro ── -->
+          <line x1="210" y1="244" x2="210" y2="426"
+                stroke-width="0.65" stroke-dasharray="1.5 9" opacity="0.22"/>
+          <circle cx="207" cy="284" r="1.2" fill="#0d0d0d" stroke="none" opacity="0.42"/>
+          <circle cx="213" cy="330" r="1"   fill="#0d0d0d" stroke="none" opacity="0.36"/>
+          <circle cx="208" cy="378" r="1.3" fill="#0d0d0d" stroke="none" opacity="0.30"/>
+
+          <!-- ── ESTRELAS (parallax) ── -->
+          <circle id="star-1" cx="38"  cy="66"  r="2.5" fill="#0d0d0d" stroke="none"/>
+          <circle id="star-2" cx="374" cy="40"  r="2"   fill="#0d0d0d" stroke="none"/>
+          <circle id="star-3" cx="396" cy="170" r="1.8" fill="#0d0d0d" stroke="none"/>
+          <circle id="star-4" cx="20"  cy="208" r="2"   fill="#0d0d0d" stroke="none"/>
+          <circle id="star-5" cx="402" cy="295" r="1.5" fill="#0d0d0d" stroke="none"/>
+          <circle id="star-6" cx="32"  cy="325" r="1.5" fill="#0d0d0d" stroke="none"/>
+          <circle id="star-7" cx="88"  cy="42"  r="1.5" fill="#0d0d0d" stroke="none"/>
+
+          <!-- ── LIVRO (hand-drawn, scroll-animated) ── -->
+          <g id="figure-book">
+
+            <!-- Page surfaces — base always visible -->
+            <path d="M 52,443 Q 131,430 210,428 L 210,564 Q 131,568 52,572 Z"
+                  fill="#f4ede0" stroke-width="2"/>
+            <path d="M 210,428 Q 289,430 368,443 L 368,572 Q 289,568 210,564 Z"
+                  fill="#f4ede0" stroke-width="2"/>
+
+            <!-- Cover boards + page-stack at bottom -->
+            <path d="M 48,572 L 48,584 Q 129,578 210,576 Q 291,578 372,584 L 372,572"
+                  fill="none" stroke-width="2.4"/>
+            <path d="M 52,576 Q 131,570 208,568" fill="none" stroke-width="0.8"/>
+            <path d="M 212,568 Q 290,570 368,576" fill="none" stroke-width="0.8"/>
+            <path d="M 52,580 Q 131,574 208,572" fill="none" stroke-width="0.55"/>
+            <path d="M 212,572 Q 290,574 368,580" fill="none" stroke-width="0.55"/>
+
+            <!-- Ruled lines — left page -->
+            <path d="M 68,452 Q 139,440 201,443" fill="none" stroke-width="0.9"/>
+            <path d="M 68,467 Q 139,455 201,458" fill="none" stroke-width="0.9"/>
+            <path d="M 68,482 Q 139,470 201,473" fill="none" stroke-width="0.9"/>
+            <path d="M 68,497 Q 139,485 201,488" fill="none" stroke-width="0.9"/>
+            <path d="M 68,512 Q 139,500 201,503" fill="none" stroke-width="0.9"/>
+            <path d="M 68,527 Q 139,516 201,518" fill="none" stroke-width="0.9"/>
+            <path d="M 68,542 Q 139,531 201,533" fill="none" stroke-width="0.9"/>
+            <path d="M 68,556 Q 139,547 201,549" fill="none" stroke-width="0.9"/>
+
+            <!-- Ruled lines — right page -->
+            <path d="M 219,443 Q 281,440 352,452" fill="none" stroke-width="0.9"/>
+            <path d="M 219,458 Q 281,455 352,467" fill="none" stroke-width="0.9"/>
+            <path d="M 219,473 Q 281,470 352,482" fill="none" stroke-width="0.9"/>
+            <path d="M 219,488 Q 281,485 352,497" fill="none" stroke-width="0.9"/>
+            <path d="M 219,503 Q 281,500 352,512" fill="none" stroke-width="0.9"/>
+            <path d="M 219,518 Q 281,516 352,527" fill="none" stroke-width="0.9"/>
+            <path d="M 219,533 Q 281,531 352,542" fill="none" stroke-width="0.9"/>
+            <path d="M 219,548 Q 281,547 352,556" fill="none" stroke-width="0.9"/>
+
+            <!-- Spine crease -->
+            <line x1="210" y1="427" x2="210" y2="565" stroke-width="2.4"/>
+
+            <!-- Gutter shadow depth at binding -->
+            <path d="M 212,430 Q 217,494 214,563" fill="none" stroke-width="1.6" opacity="0.35"/>
+            <path d="M 215,432 Q 221,494 217,562" fill="none" stroke-width="1"   opacity="0.2"/>
+
+            <!-- Turning pages — morphed by scroll (right → arc → left) -->
+            <path id="turn-page-1"
+              d="M 210,428 Q 298,443 370,443 L 370,572 Q 298,566 210,564 Z"
+              fill="#f4ede0" stroke="#0d0d0d" stroke-width="1.6"/>
+            <path id="turn-page-2"
+              d="M 210,428 Q 298,443 370,443 L 370,572 Q 298,566 210,564 Z"
+              fill="#f4ede0" stroke="#0d0d0d" stroke-width="1.5"/>
+            <path id="turn-page-3"
+              d="M 210,428 Q 298,443 370,443 L 370,572 Q 298,566 210,564 Z"
+              fill="#f4ede0" stroke="#0d0d0d" stroke-width="1.3"/>
+          </g>
+
+        </svg>
+      </div>
+
+      <!-- Right column: statement + photos -->
+      <div class="hero__photos">
+        <p class="hero__statement">
+          Um espaço que resiste<br>à definição — porque<br>está sempre a tornar‑se.
+        </p>
+        <div class="hero__photo hero__photo--a">
+          <img src="img/photo.png" alt="Espaço da Casa das Artes" />
+        </div>
+        <div class="hero__photo hero__photo--b">
+          <img src="img/guita.png" alt="Interior da Casa das Artes" />
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom: city tag + big name -->
+    <div class="hero__foot">
+      <span class="hero__city">Lisboa · Casa das Artes</span>
+      <h1 class="hero__name">Meia Volta<br>do Úrano</h1>
+    </div>
+  </section>
+
+  <!-- ═══ STATEMENT (dark) ═══ -->
+  <section class="statement" aria-label="Declaração de intenções">
+    <p class="statement__text reveal">
+      Um espaço entre<br>o livro e o copo.<br>O silêncio e o som.
+    </p>
+
+    <!-- Wine pour illustration (scroll-animated) -->
+    <div class="statement__pour" id="statement-pour" aria-hidden="true">
+      <svg id="pour-svg" viewBox="0 0 280 500" fill="none" stroke="#f4ede0" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+
+        <defs>
+          <!-- Clip region = inside the glass bowl -->
+          <clipPath id="glass-clip">
+            <path d="M64,285 C56,335 74,368 100,375 C126,368 144,335 136,285 Z"/>
+          </clipPath>
+          <!-- Clip that reveals the pour stream top-to-bottom as scroll progresses -->
+          <clipPath id="pour-clip">
+            <rect id="pour-clip-rect" x="80" y="44" width="40" height="0"/>
+          </clipPath>
+        </defs>
+
+        <!-- ── Decorative stars ── -->
+        <circle cx="28"  cy="58"  r="2"   fill="#f4ede0" stroke="none"/>
+        <circle cx="16"  cy="118" r="1.5" fill="#f4ede0" stroke="none"/>
+        <circle cx="44"  cy="26"  r="1.5" fill="#f4ede0" stroke="none"/>
+        <circle cx="260" cy="380" r="2"   fill="#f4ede0" stroke="none"/>
+        <circle cx="248" cy="445" r="1.5" fill="#f4ede0" stroke="none"/>
+
+        <!-- ── BOTTLE (rotates on scroll; transform-origin set in CSS) ── -->
+        <g id="bottle-group">
+          <!-- Bottle silhouette: neck → shoulder → body -->
+          <path d="M186,24 L186,76
+                   C178,90 168,106 166,128
+                   L160,204
+                   Q160,212 170,212
+                   L220,212
+                   Q230,212 230,204
+                   L224,128
+                   C222,106 212,90 204,76
+                   L204,24 Z" stroke-width="2"/>
+          <!-- Cork -->
+          <path d="M187,14 L187,27 L203,27 L203,14 Z" stroke-width="1.5"/>
+          <line x1="187" y1="21" x2="203" y2="21" stroke-width="1"/>
+          <!-- Foil ring at neck base -->
+          <line x1="183" y1="73" x2="207" y2="73" stroke-width="1.2"/>
+          <line x1="184" y1="78" x2="206" y2="78" stroke-width="0.8"/>
+          <!-- Label -->
+          <rect x="165" y="138" width="60" height="56" rx="1" stroke-width="1.2"/>
+          <line x1="173" y1="151" x2="219" y2="151" stroke-width="0.9"/>
+          <line x1="173" y1="160" x2="219" y2="160" stroke-width="0.9"/>
+          <line x1="179" y1="169" x2="211" y2="169" stroke-width="0.7"/>
+          <line x1="179" y1="178" x2="211" y2="178" stroke-width="0.7"/>
+        </g>
+
+        <!-- ── POUR STREAM: tapered filled liquid shape, revealed top-to-bottom ── -->
+        <!-- Left edge down + right edge back up = tapered teardrop stream -->
+        <path id="pour-stream"
+          d="M97,49 C94,150 97,225 98.5,285
+             L101.5,285
+             C104,225 101,150 104,49 Z"
+          fill="#8B2020" stroke="none" opacity="0.88"
+          clip-path="url(#pour-clip)"/>
+
+        <!-- ── WINE GLASS ── -->
+        <!-- Bowl curve -->
+        <path d="M64,285 C56,335 74,368 100,375 C126,368 144,335 136,285" stroke-width="2"/>
+        <!-- Rim -->
+        <line x1="64" y1="285" x2="136" y2="285" stroke-width="2"/>
+        <!-- Stem -->
+        <line x1="100" y1="375" x2="100" y2="422" stroke-width="1.8"/>
+        <!-- Base -->
+        <path d="M72,424 Q100,430 128,424" stroke-width="2"/>
+
+        <!-- Wine fill inside glass (height animated by JS) -->
+        <rect id="wine-fill"
+          x="54" y="375" width="92" height="0"
+          fill="#8B2020" opacity="0.82"
+          clip-path="url(#glass-clip)"/>
+
+      </svg>
+    </div>
+  </section>
+
+  <!-- ═══ CONCEITO ═══ -->
+  <section class="conceito" id="conceito">
+    <div class="conceito__inner">
+      <div class="conceito__text">
+        <p class="section-label reveal">01 — Conceito</p>
+        <h2 class="display-heading reveal">
+          Um espaço híbrido<br>
+          <em>onde a arte,<br>
+          o pensamento<br>
+          e o paladar<br>
+          se encontram.</em>
+        </h2>
+        <div class="conceito__body">
+          <p class="reveal">
+            A Meia Volta do Úrano nasceu do desejo de quebrar fronteiras entre disciplinas.
+            É um restaurante onde se come bem, uma livraria onde se pensa em voz alta,
+            um bar onde se brinda a ideias, uma galeria onde a obra respira.
+            Tudo sob o mesmo tecto — e sob a mesma inquietação criativa.
+          </p>
+          <p class="reveal">
+            Cada detalhe foi desenhado para prolongar o tempo: a luz baixa,
+            o papel sobre as paredes, a conversa entre mesas, a música ao fundo.
+            Um convite a dar <em>meia volta</em> ao quotidiano.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EVENTOS ═══ -->
+  <section class="eventos" id="eventos">
+    <div class="eventos__inner">
+      <div class="eventos__header">
+        <p class="section-label reveal">02 — Eventos</p>
+        <h2 class="display-heading reveal">Uma agenda <em>viva.</em></h2>
+      </div>
+
+      <div class="eventos__list" id="eventos-list"></div>
+    </div>
+  </section>
+
+  <!-- ═══ MENU ═══ -->
+  <section class="menu-section" id="menu">
+    <div class="menu-section__inner">
+      <p class="section-label section-label--light reveal">03 — Menu</p>
+
+      <!-- Menu — coloca as imagens PNG em img/menu-frente.png e img/menu-verso.png -->
+      <div class="menu-card-wrap reveal">
+        <div class="menu-cards">
+          <figure class="menu-card menu-card--left">
+            <img src="img/menu-frente.png" alt="Carta — Meia Volta do Úrano" class="menu-card__img" />
+          </figure>
+          <figure class="menu-card menu-card--right">
+            <img src="img/menu-verso.png" alt="Carta — verso" class="menu-card__img" />
+          </figure>
+        </div>
+        <p class="menu-card__caption">Carta sujeita a alterações sazonais · IVA incluído</p>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ═══ ESPAÇOS ═══ -->
+  <section class="espacos" id="espacos">
+    <div class="espacos__inner">
+      <div class="espacos__header">
+        <p class="section-label reveal">04 — Espaços</p>
+        <h2 class="display-heading reveal">Cinco casas<br><em>numa só.</em></h2>
+      </div>
+      <div class="espacos__grid">
+        <article class="espaco reveal">
+          <span class="espaco__num">I</span>
+          <div class="espaco__content">
+            <h3>Restaurante</h3>
+            <p>Cozinha de autor com raízes portuguesas, produto local e uma carta sazonal que se reinventa.</p>
+          </div>
+        </article>
+        <article class="espaco reveal">
+          <span class="espaco__num">II</span>
+          <div class="espaco__content">
+            <h3>Livraria</h3>
+            <p>Edições cuidadas, autores lusófonos, obras de arte e catálogos raros — para folhear entre pratos.</p>
+          </div>
+        </article>
+        <article class="espaco reveal">
+          <span class="espaco__num">III</span>
+          <div class="espaco__content">
+            <h3>Cafetaria</h3>
+            <p>Cafés de especialidade, pastelaria artesanal e doçaria conventual servidos de manhã à noite.</p>
+          </div>
+        </article>
+        <article class="espaco reveal">
+          <span class="espaco__num">IV</span>
+          <div class="espaco__content">
+            <h3>Bar</h3>
+            <p>Vinhos naturais, cocktails de autor e destilados raros numa carta pensada como poesia líquida.</p>
+          </div>
+        </article>
+        <article class="espaco reveal">
+          <span class="espaco__num">V</span>
+          <div class="espaco__content">
+            <h3>Galeria</h3>
+            <p>Exposições rotativas de artistas nacionais e internacionais. A obra muda. O espaço transforma‑se.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACTO ═══ -->
+  <section class="contacto" id="contacto">
+    <div class="contacto__inner">
+      <div class="contacto__big reveal">
+        <span>Dê meia</span><br>
+        <span class="contacto__outline">volta</span><!--
+        --><span class="contacto__reservar">
+          <a href="https://www.tripadvisor.com/" class="reservar-btn" target="_blank" rel="noopener" aria-label="Reservar uma mesa">
+            <svg class="reservar-btn__frame" viewBox="0 0 400 220" fill="none" aria-hidden="true">
+              <!-- Hand-drawn border -->
+              <path class="reservar-btn__border"
+                d="M 12 12 Q 100 8 200 9 Q 300 8 388 12 Q 392 62 391 110 Q 392 158 388 208 Q 300 212 200 211 Q 100 212 12 208 Q 8 158 9 110 Q 8 62 12 12 Z"
+                stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Saturn — top-right corner, small and contained -->
+              <g class="reservar-btn__planet" style="transform: translate(354px, 30px)">
+                <circle cx="0" cy="0" r="13" stroke="currentColor" stroke-width="0.9" fill="none"/>
+                <ellipse class="reservar-btn__ring" cx="0" cy="0" rx="22" ry="5.5" stroke="currentColor" stroke-width="0.8" fill="none"/>
+              </g>
+              <!-- 3 minimal dots -->
+              <circle cx="30"  cy="42"  r="1.3" fill="currentColor" opacity="0.4"/>
+              <circle cx="58"  cy="182" r="1.1" fill="currentColor" opacity="0.35"/>
+              <circle cx="310" cy="190" r="1"   fill="currentColor" opacity="0.3"/>
+            </svg>
+            <span class="reservar-btn__label">Reservar Mesa</span>
+          </a>
+        </span><br>
+        <span>e visite‑nos.</span>
+      </div>
+
+      <div class="contacto__grid">
+        <div class="contacto__col reveal">
+          <h4>Morada</h4>
+          <p>Rua das Artes, nº 14<br>Lisboa, Portugal</p>
+        </div>
+        <div class="contacto__col reveal">
+          <h4>Horário</h4>
+          <p>Ter — Sáb · 12h — 00h<br>Dom · 12h — 18h<br>Segunda encerrado</p>
+        </div>
+        <div class="contacto__col reveal">
+          <h4>Contacto</h4>
+          <p>+351 912 345 678<br><a href="mailto:reservas@meiavoltadeurano.pt">reservas@meiavoltadeurano.pt</a></p>
+        </div>
+        <div class="contacto__col reveal">
+          <h4>Redes sociais</h4>
+          <p><a href="#">Instagram</a><br><a href="#">Facebook</a></p>
+          <a class="contacto__cta" href="https://www.tripadvisor.com/" target="_blank" rel="noopener">
+            Reservar no TripAdvisor →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <p class="footer__copy">© <span id="year"></span> Meia Volta do Úrano · Casa das Artes · Todos os direitos reservados.</p>
+    <div class="footer__links">
+      <a href="#home">Topo</a>
+      <a href="#menu">Menu</a>
+    </div>
+  </footer>
+
+  <script src="js/events.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

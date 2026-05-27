@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Admin · Eventos · Meia Volta do Úrano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin-body">
+
+  <header class="admin-header">
+    <div>
+      <p class="admin-eyebrow">Casa das Artes · Painel</p>
+      <h1>Editor de Eventos</h1>
+    </div>
+    <a href="index.html" class="admin-back">← Voltar ao site</a>
+  </header>
+
+  <main class="admin-main">
+    <p class="admin-intro">
+      Edite até <strong>4 eventos</strong>. As alterações ficam guardadas neste navegador
+      e aparecem automaticamente na página principal.
+    </p>
+
+    <form id="adminForm" class="admin-form" autocomplete="off"></form>
+
+    <div class="admin-actions">
+      <button type="button" class="admin-btn admin-btn--primary" id="saveBtn">Guardar alterações</button>
+      <button type="button" class="admin-btn admin-btn--ghost" id="resetBtn">Repor por defeito</button>
+    </div>
+    <p class="admin-status" id="status" role="status" aria-live="polite"></p>
+  </main>
+
+  <script src="js/events.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
