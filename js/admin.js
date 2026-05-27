@@ -61,7 +61,7 @@
         <input name="meta" type="text" value="${escAttr(ev.meta)}" placeholder="21h30 · Sala principal · Entrada livre" />
       </label>
       <label>Imagem — URL
-        <input name="image" type="url" value="${escAttr(ev.image)}" placeholder="https://..." />
+        <input name="image" type="text" value="${escAttr(ev.image)}" placeholder="https://..." />
       </label>
       <label>Ou carregar do dispositivo
         <input name="imageFile" type="file" accept="image/*" />
